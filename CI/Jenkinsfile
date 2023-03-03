@@ -39,13 +39,13 @@ options {
             steps {
                 script {
                     try {
-                        bat 'chcp 65001 && cd mle-lab-work-1 && docker-compose build'
+                        bat 'chcp 65001 && cd MLE_laboratory_work_1 && docker-compose build'
                         }
 
                     finally {
                     bat '''
                         chcp 65001
-                        cd mle-lab-work-1
+                        cd MLE_laboratory_work_1
                         docker-compose up -d
                         '''
                         }
@@ -56,11 +56,11 @@ options {
         // use for multi containers:
         //docker exec %containerId% cd app && coverage run src/unit_tests/test_preprocess.py && coverage run -a src/unit_tests/test_training.py && coverage report -m
         //use for single container (with auth):
-        //docker run --name mle-lab-work-1_web_1 cd app && coverage run src/unit_tests/test_preprocess.py && coverage run -a src/unit_tests/test_training.py && coverage report -m
+        //docker run --name MLE_laboratory_work_1_web_1 cd app && coverage run src/unit_tests/test_preprocess.py && coverage run -a src/unit_tests/test_training.py && coverage report -m
 
         stage('Checkout container logs') {
             steps {
-                dir("mle-lab-work-1") {
+                dir("MLE_laboratory_work_1") {
                         bat '''
                             docker-compose up -d
                             for /f %%i in ('docker ps -qf "name=^mle-lab-work-1-web-1"') do set containerId=%%i
