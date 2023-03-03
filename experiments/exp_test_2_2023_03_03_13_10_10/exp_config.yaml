@@ -1,0 +1,52 @@
+model: CNN
+model params:
+  label_mode: categorical
+  batch_size: '32'
+  image_size_1d: '128'
+  image_size_2d: '128'
+  test_size: '0.2'
+  seed: '0'
+  input_shape_1d: '128'
+  input_shape_2d: '128'
+  input_shape_3d: '3'
+  1_layer_filters: '32'
+  1_layer_kernel_size_1d: '3'
+  1_layer_kernel_size_2d: '3'
+  1_layer_activation: relu
+  2_layer_pool_size_1d: '2'
+  2_layer_pool_size_2d: '2'
+  3_layer_filters: '64'
+  3_layer_kernel_size_1d: '3'
+  3_layer_kernel_size_2d: '3'
+  3_layer_activation: relu
+  4_layer_pool_size_1d: '2'
+  4_layer_pool_size_2d: '2'
+  5_layer_filters: '128'
+  5_layer_kernel_size_1d: '3'
+  5_layer_kernel_size_2d: '3'
+  5_layer_activation: relu
+  6_layer_pool_size_1d: '2'
+  6_layer_pool_size_2d: '2'
+  7_layer_filters: '128'
+  7_layer_kernel_size_1d: '3'
+  7_layer_kernel_size_2d: '3'
+  7_layer_activation: relu
+  8_layer_pool_size_1d: '2'
+  8_layer_pool_size_2d: '2'
+  9_layer_units: '512'
+  9_layer_activation: relu
+  10_layer_units: '2'
+  10_layer_activation: sigmoid
+  optimizer: rmsprop
+  loss: categorical_crossentropy
+  metrics: accuracy
+  steps_per_eproch: '100'
+  epochs: '10'
+  validation_steps: '10'
+  path: "C:\\Users\\\u042D\u043B\u044C\u0432\u0438\u0440\\Documents\\Programming\\\
+    Magistr\\MLE\\MLE_laboratory_work_1\\experiments\\cnn_sav"
+tests: func
+accuracy score: '0.4000000059604645'
+test dir name: test_2
+test dir path: "C:\\Users\\\u042D\u043B\u044C\u0432\u0438\u0440\\Documents\\Programming\\\
+  Magistr\\MLE\\MLE_laboratory_work_1\\tests\\test_2"

@@ -1,0 +1,5 @@
+[core]
+    remote = remote_storage
+    autostage = true
+['remote "remote_storage"']
+    url = C:\Users\Эльвир\Documents\Programming\Magistr\MLE\MLE_laboratory_work_1\dvc_remote
